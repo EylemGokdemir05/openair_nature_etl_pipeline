@@ -1,0 +1,11 @@
+openair_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: openair-nature-pipeline
+      dataset: openair_nature_data
+      threads: 1
+      keyfile: /opt/airflow/gcp-key.json
+      location: europe-west2

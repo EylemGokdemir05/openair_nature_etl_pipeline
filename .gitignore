@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.DS_Store
+Thumbs.db
+
+logs/
+plugins/
+*.log
+*.tmp
+
+*.json
+*.key
+.env
+
+# dbt dependencies
+dbt_project/target/
+dbt_project/logs/
+dbt_project/.user.yml
+
+.vscode/
+.idea/
