@@ -20,13 +20,12 @@ LON = "8.45"
 def extract_air_quality_data():
     API_KEY = os.getenv('OPENWEATHER_API_KEY')
 
-    logging.info(f"DEBUG: API_KEY degeri -> {API_KEY}")
+    logging.info(f"DEBUG: API_KEY value -> {API_KEY}")
     
     if not API_KEY:
-        logging.error("API_KEY BULUNAMADI!")
-        raise Exception("API_KEY sistemde tanımlı değil.")
+        logging.error("API_KEY COULD NOT FOUND!")
+        raise Exception("API_KEY is not defined in the system.")
 
-    """API'den veri çeken fonksiyon"""
     url = f"http://api.openweathermap.org/data/2.5/air_pollution?lat={LAT}&lon={LON}&appid={API_KEY}"
     response = requests.get(url)
     if response.status_code == 200:
